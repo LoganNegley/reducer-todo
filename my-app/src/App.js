@@ -9,7 +9,7 @@ function App() {
 const [state, dispatch] = useReducer(todoReducer,initialState);
 
 const addTodo = (newTodo) => {
-  dispatch({type='ADD TODO', payload='newTodo'})
+  dispatch({type: 'ADD TODO', payload: 'newTodo'})
 };
 
 // const toggleCompleted = () => {
@@ -22,7 +22,7 @@ const addTodo = (newTodo) => {
 
   return (
     <div className="App">
-    <Form/>
+    <Form addTodo={addTodo}/>
     <TodoList state={state}/>
     </div>
   );

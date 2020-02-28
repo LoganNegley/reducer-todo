@@ -1,19 +1,18 @@
 import React, {useReducer} from 'react';
 
 
-function Form() {
-  const 
+function Form() { 
 
   // const handleSubmit = (event){
   //   event.preventDefault;
 
   // };
 
-  const handleChange =(event)=>{
-    console.log(event.target.value)
+  // const handleChange =(event)=>{
+  //   console.log(event.target.value)
 
 
-  };
+  // };
 
   return (
     <div className="form-container">
@@ -22,7 +21,7 @@ function Form() {
                 type='text'
                 name='todo-input'
                 value=''
-                onChange={handleChange}
+                // onChange={handleChange}
             ></input>
             <button type='submit'>Add Todo</button>
             <button>Clear Completed</button>
