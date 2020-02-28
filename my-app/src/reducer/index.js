@@ -9,6 +9,8 @@ export const initialState ={
         id:3548710235 }
     ] }
 
-    export const todoReducer(state, action )=>{
+
+
+    export const todoReducer = (state, action )=>{
         return state
     };
