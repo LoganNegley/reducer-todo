@@ -9,6 +9,7 @@ function Form() {
             <input 
                 type='text'
                 name='todo'
+                value=''
             ></input>
             <button>Add Todo</button>
             <button>Clear Completed</button>
