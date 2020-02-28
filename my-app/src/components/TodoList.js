@@ -1,11 +1,16 @@
 import React, {useReducer} from 'react';
 import App from '../App';
 
-function TodoList() {
+function TodoList(props) {
+    console.log(props.state.list)
 
   return (
     <div className="list-container">
-        <p>Hello from the list</p>
+        {props.state.list.map(item =>(
+            <div className='todo'>
+                <p>{item.item}</p>
+            </div>
+        ))}
     </div>
   );
 }
