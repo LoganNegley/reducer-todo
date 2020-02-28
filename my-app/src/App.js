@@ -3,6 +3,7 @@ import './App.css';
 import {initialState, todoReducer} from '../src/reducer/index';
 import TodoList from '../src/components/TodoList';
 import Form from '../src/components/Form';
+import Todo from '../src/components/Todo.js';
 
 function App() {
 
