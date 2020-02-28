@@ -12,6 +12,13 @@ const [state, dispatch] = useReducer(todoReducer,initialState);
 
 // };
 
+// const toggleCompleted = () => {
+
+// };
+
+// const clearTodo = ()=>{
+
+// };
 
   return (
     <div className="App">

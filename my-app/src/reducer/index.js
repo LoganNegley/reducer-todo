@@ -12,5 +12,8 @@ export const initialState ={
 
 
     export const todoReducer = (state, action )=>{
-        return state
+        if(action.type === ){
+
+        }
+        return state;
     };
