@@ -6,7 +6,12 @@ import Form from '../src/components/Form';
 
 function App() {
 
-const [state, dispatch] = useReducer(todoReducer,initialState)
+const [state, dispatch] = useReducer(todoReducer,initialState);
+
+// const addTodo = () => {
+
+// };
+
 
   return (
     <div className="App">
