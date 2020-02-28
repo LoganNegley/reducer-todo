@@ -12,8 +12,16 @@ export const initialState ={
 
 
     export const todoReducer = (state, action )=>{
-        if(action.type === ){
-
+        if(action.type === 'ADD TODO' ){
+        return{
+            ...state,
+            list:[...state.list, {
+                item:action.payload,
+                completed:false,
+                id: Date.now()
+            
+            }]
         }
+        } else{
         return state;
-    };
+    }};
