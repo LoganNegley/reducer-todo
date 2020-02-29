@@ -23,6 +23,19 @@ export const initialState ={
             
             }]
         }
-        } else{
-        return state;
-    }};
+        } else if( action.type === 'CLEAR TODO'){
+            return {
+                ...state, 
+                list: state.list.filter(item => !item.completed)
+            }
+      
+        }
+    
+    
+    
+    
+    
+    
+    
+      return state;
+    };

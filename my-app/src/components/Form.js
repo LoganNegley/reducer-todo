@@ -6,11 +6,6 @@ function Form(props){
   const [newTodo, setNewTodo] = useState('');
 
 // handling of form functions
-  // const handleSubmit(event) =>{
-  //   event.preventDefault;
-  // props.addTodo(newTodo);
-  // setNewTodo('')
-  // };
 
   const handleChange =(event)=>{
     console.log(event.target.value);
