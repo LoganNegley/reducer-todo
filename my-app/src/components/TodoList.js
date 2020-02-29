@@ -9,7 +9,7 @@ function TodoList(props) {
     <div className="list-container">
         {props.state.list.map(item =>(
             <div className='todo-container'>
-                <Todo todo={item}/>
+                <Todo toggleCompleted={props.toggleCompleted} todo={item} key={item.id}/>
             </div>
         ))}
     </div>
