@@ -23,7 +23,7 @@ function Form(props){
                 onChange={handleChange}
             ></input>
             <button onClick={event => {event.preventDefault(); props.addTodo(newTodo); setNewTodo('');}}>Add Todo</button>
-            <button>Clear Completed</button>
+            <button onClick={event =>{event.preventDefault(); props.clearTodo()}}>Clear Completed</button>
         </form>
     </div>
   );
