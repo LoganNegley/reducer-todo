@@ -8,7 +8,7 @@ function TodoList(props) {
   return (
     <div className="list-container">
         {props.state.list.map(item => {
-          return(
+          return (
                 <Todo toggleCompleted={props.toggleCompleted} 
                       todo={item} 
                       key={item.id}/>
