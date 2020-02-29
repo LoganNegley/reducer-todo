@@ -7,13 +7,13 @@ function TodoList(props) {
 
   return (
     <div className="list-container">
-        {props.state.list.map(item =>(
-            <div className='todo-container'>
-                <Todo toggleCompleted={props.toggleCompleted} todo={item} key={item.id}/>
-            </div>
-        ))}
-    </div>
+        {props.state.list.map(item => {
+                <Todo toggleCompleted={props.toggleCompleted} 
+                      todo={item} 
+                      key={item.id}/>
+          })}
+   </div>
   );
-}
+};
 
 export default TodoList;

@@ -9,7 +9,10 @@ console.log(props.todo.id)
     <div className="todo" >
         <p style={props.todo.completed ? {textDecoration:'line-through'}:null}
 
-          onClick={event =>{props.toggleCompleted(props.todo.id)}}>
+          onClick={ event =>{
+              event.preventDefault();
+              props.toggleCompleted(props.todo.key);
+          }}>
           {props.todo.item}
         </p>
     </div>
