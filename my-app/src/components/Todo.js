@@ -1,10 +1,10 @@
 import React  from 'react';
 
-function Todo(props) {
+function Todo (props) {
 
   return (
     <div className="todo">
-    
+
     </div>
   );
 }

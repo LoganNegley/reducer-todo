@@ -9,8 +9,8 @@ function App() {
 
 const [state, dispatch] = useReducer(todoReducer,initialState);
 
-const addTodo = (newTodo) => {
-  dispatch({type: 'ADD TODO', payload: 'newTodo'})
+const addTodo = newTodo => {
+  dispatch({type: 'ADD TODO', payload:newTodo})
 };
 
 // const toggleCompleted = () => {

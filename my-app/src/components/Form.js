@@ -1,30 +1,33 @@
 import React, {useReducer, useState} from 'react';
 
 
-function Form(props) { 
-
+function Form(props){ 
+// State for to add a todo
   const [newTodo, setNewTodo] = useState('');
 
-  const handleSubmit = (event) =>{
-    event.preventDefault;
-
-  };
+// handling of form functions
+  // const handleSubmit(event) =>{
+  //   event.preventDefault;
+  // props.addTodo(newTodo);
+  // setNewTodo('')
+  // };
 
   const handleChange =(event)=>{
     console.log(event.target.value);
     setNewTodo(event.target.value);
   };
 
+// form 
   return (
     <div className="form-container">
-        <form  onClick={handleSubmit}>
+        <form>
             <input 
                 type='text'
                 name='todo-input'
                 value={newTodo}
                 onChange={handleChange}
             ></input>
-            <button type='submit'onClick={props.addTodo(newTodo)}>Add Todo</button>
+            <button onClick={event => {event.preventDefault(); props.addTodo(newTodo); setNewTodo('');}}>Add Todo</button>
             <button>Clear Completed</button>
         </form>
     </div>
