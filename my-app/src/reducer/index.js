@@ -13,6 +13,7 @@ export const initialState ={
 
     export const todoReducer = (state, action )=>{
         console.log(state,action)
+        
         if(action.type === 'ADD TODO' ){
         return{
             ...state,
@@ -27,15 +28,21 @@ export const initialState ={
             return {
                 ...state, 
                 list: state.list.filter(item => !item.completed)
+            };
+        } else if( action.type === 'TOGGLE COMPLETED'){
+            return  {
+                ...state,
+                list:state.list.map(item =>{
+                    if(item.id === action.payload){
+                        return {
+                            ...state.list, 
+                                completed: !item.completed
+                        }
+                    }
+                })
             }
-      
-        }
-    
-    
-    
-    
-    
-    
-    
-      return state;
+
+        } else{
+            return state;
+        };
     };

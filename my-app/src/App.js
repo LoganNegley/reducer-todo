@@ -13,17 +13,17 @@ const addTodo = newTodo => {
   dispatch({type: 'ADD TODO', payload:newTodo})
 };
 
-// const toggleCompleted = () => {
+const toggleCompleted = () => {
 
-// };
+};
 
-// const clearTodo = ()=>{
+const clearTodo = ()=>{
 
-// };
+};
 
   return (
     <div className="App">
-    <Form addTodo={addTodo}/>
+    <Form addTodo={addTodo} toggleCompleted={toggleCompleted}/>
     <TodoList state={state}/>
     </div>
   );
