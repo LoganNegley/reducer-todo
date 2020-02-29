@@ -30,16 +30,15 @@ export const initialState ={
                 list: state.list.filter(item => !item.completed)
             };
         } else if( action.type === 'TOGGLE COMPLETED'){
+            console.log(action.payload)
             return  {
                 ...state,
-                list:state.list.map(item =>{
-                    if(item.id === action.payload){
-                        return {
-                            ...state.list, 
-                                completed: !item.completed
+                    list: state.list.map(item =>{
+                        if(item.id === action.payload){
+                            item.completed = !item.completed
                         }
-                    }
-                })
+                        return item;
+                    })
             }
 
         } else{

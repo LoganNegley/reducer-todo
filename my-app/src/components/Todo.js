@@ -11,7 +11,7 @@ console.log(props.todo.id)
 
           onClick={ event =>{
               event.preventDefault();
-              props.toggleCompleted(props.todo.key);
+              props.toggleCompleted(props.todo.id);
           }}>
           {props.todo.item}
         </p>
